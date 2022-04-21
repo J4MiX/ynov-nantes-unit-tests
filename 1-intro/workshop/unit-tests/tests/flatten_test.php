@@ -8,6 +8,6 @@ class FlattenTest extends TestCase
 {
     public function test_something()
     {
-        $this->assertEqual(1337, 1337);
+        $this->assertEquals(1337, 1337);
     }
 }
