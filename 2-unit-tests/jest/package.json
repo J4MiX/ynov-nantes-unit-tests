@@ -1,0 +1,35 @@
+{
+    "name": "ynov-unit-test-xml",
+    "version": "1.0.0",
+    "description": "Ynov Unit test day 2",
+    "main": "index.js",
+    "engines": {
+        "node": ">=12.22"
+    },
+    "scripts": {
+        "build": "node ./index.js",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "test": "jest"
+    },
+    "author": "la team BTP",
+    "license": "ISC",
+    "devDependencies": {
+        "del": "^6.0.0",
+        "eslint": "^8.13.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-plugin-import": "^2.26.0",
+        "gulp": "^4.0.2",
+        "gulp-zip": "^5.1.0",
+        "husky": "^4.2.5",
+        "jest": "^27.5.1",
+        "node-fetch": "^2.2.0",
+        "xml2js": "^0.4.22"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint",
+            "pre-push": "npm run lint && npm run test"
+        }
+    }
+}
