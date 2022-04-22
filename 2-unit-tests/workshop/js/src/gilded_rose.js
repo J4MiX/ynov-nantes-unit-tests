@@ -12,10 +12,12 @@ class Shop {
     }
     updateQuality() {
         for (let i = 0; i < this.items.length; i++) {
+            const multiplier = this.items[i].name === "Conjured Item" ? 2 : 1;
+
             if (this.items[i].name != 'Aged Brie' && this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
                 if (this.items[i].quality > 0) {
                     if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
-                        this.items[i].quality = this.items[i].quality - 1;
+                        this.items[i].quality = this.items[i].quality - multiplier;
                     }
                 }
             } else {
@@ -43,7 +45,7 @@ class Shop {
                     if (this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
                         if (this.items[i].quality > 0) {
                             if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
-                                this.items[i].quality = this.items[i].quality - 1;
+                                this.items[i].quality = this.items[i].quality - multiplier;
                             }
                         }
                     } else {
