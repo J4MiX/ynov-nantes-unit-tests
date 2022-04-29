@@ -46,6 +46,8 @@ def main(input):
     accepted_chars = ['.', mine, '\n']
 
     grille = []
+    if (input == ''):
+        return
     fin = open(input, 'r')
     nrows, ncols = count_things(fin.readline())
     if (nrows < 0 or ncols > 100):

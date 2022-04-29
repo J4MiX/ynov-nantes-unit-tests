@@ -8,3 +8,6 @@ def test_map_too_big():
 def test_invalid_char():
     with pytest.raises(Exception):
         minesweeper.main('./txts/invalid_char.txt')
+
+def test_empty():
+    minesweeper.main('')
